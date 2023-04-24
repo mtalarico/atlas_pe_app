@@ -1,0 +1,22 @@
+{
+  "local_ips": ["${ip}/32"],
+  "aws": {
+    "sg_name": "${security_group_name}",
+    "subnet_id": "${subnet-XXXXXXX}",
+    "key_name": "${key_pair_name}",
+    "region": "us-east-1",
+    "instance_type": "t2.small",
+    "tags": {
+      "Name": "${app_name}",
+      "owner": "${first.last}",
+      "expire": "${YYYY-MM-DD}",
+      "description": "managed by Terraform"
+    }
+  },
+  "atlas": {
+    "public_key": "${public_key}",
+    "private_key": "${private_key}",
+    "project_id": "618af0d4cf620a3a68d4ea36",
+    "cluster_name": "test"
+  }
+}
